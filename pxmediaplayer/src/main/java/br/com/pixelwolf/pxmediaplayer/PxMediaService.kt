@@ -102,8 +102,10 @@ class PxMediaService : MediaBrowserServiceCompat() {
         result: Result<List<MediaBrowserCompat.MediaItem>>
     ) {
         if (parentId == MediaConstants.MEDIA_ROOT_ID_EMPTY) {
-            result.sendResult(null)
+            Log.d(TAG, "onLoadChildren: oi 1")
+            result.sendResult(mediaLibrary.getMediaItems())
         } else {
+            Log.d(TAG, "onLoadChildren: oi 2")
             result.sendResult(mediaLibrary.getMediaItems())
         }
     }
@@ -113,8 +115,10 @@ class PxMediaService : MediaBrowserServiceCompat() {
         clientUid: Int,
         rootHints: Bundle?
     ): BrowserRoot? = if (clientPackageName == applicationContext.packageName) {
+        Log.d(TAG, "onGetRoot: oi 1")
         BrowserRoot(MediaConstants.MEDIA_ROOT_ID, null)
     } else {
+        Log.d(TAG, "onGetRoot: oi 2")
         BrowserRoot(MediaConstants.MEDIA_ROOT_ID_EMPTY, null)
     }
 

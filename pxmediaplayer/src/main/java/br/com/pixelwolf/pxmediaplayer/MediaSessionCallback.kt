@@ -179,4 +179,41 @@ class MediaSessionCallback(
         mediaLibrary.addMedia(media)
         onAddQueueItem(media.description)
     }
+
+    private fun buildMedias(): List<PxMedia> = listOf(
+        PxMedia(
+            id = "711-os-reflexos-da-revolucao-iraniana-2",
+            title = "Os Reflexos da Revolução Iraniana",
+            artist = "Jovem Nerd",
+            duration = 4916203,
+            artUrl = "https://uploads.jovemnerd.com.br/wp-content/uploads/2020/02/NC_711_Os-Reflexos-da-Revolucao-Islamica_giga-1.jpg",
+            mediaUrl = "https://nerdcast.jovemnerd.com.br/nerdcast_711_revolucao_iraniana.mp3",
+            publishDate = System.currentTimeMillis()
+        ),
+        PxMedia(
+            id = "711-os-reflexos-da-revolucao-iraniana",
+            title = "Os Reflexos da Revolução Iraniana",
+            artist = "Jovem Nerd",
+            duration = 4916203,
+            artUrl = "https://uploads.jovemnerd.com.br/wp-content/uploads/2020/02/NC_711_Os-Reflexos-da-Revolucao-Islamica_giga-1.jpg",
+            mediaUrl = "/storage/emulated/0/system_data/pxmediacache/28ff2a3c5a0ea894e240cba39d4af59f",
+            publishDate = System.currentTimeMillis()
+        ),
+        PxMedia(
+            id = "drop_and_roll",
+            title = "Drop and Roll",
+            artist = "Silent Partner",
+            duration = 121128,
+            mediaUrl = "https://storage.googleapis.com/automotive-media/Drop_and_Roll.mp3",
+            publishDate = System.currentTimeMillis()
+        ),
+        PxMedia(
+            id = "hey_sailor",
+            title = "Hey Sailor",
+            artist = "Letter Box",
+            duration = 193646,
+            mediaUrl = "https://storage.googleapis.com/automotive-media/Hey_Sailor.mp3",
+            publishDate = System.currentTimeMillis()
+        )
+    )
 }

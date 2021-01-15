@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.PxMediaPlayer" parent="android:Theme.Material.Light.DarkActionBar" />
+</resources>
